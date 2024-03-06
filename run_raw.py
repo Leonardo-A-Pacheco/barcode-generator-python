@@ -12,7 +12,6 @@ def create_tag():
     tag = Code128(product_code, writer=ImageWriter())
     path_from_tag = f'{tag}'
     tag.save(path_from_tag)
-
     return jsonify({ "tag_path": path_from_tag })
 
 if __name__ == '__main__':
